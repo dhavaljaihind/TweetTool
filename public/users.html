@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Users Management</title>
+  <link rel="stylesheet" href="/admin.css" />
+</head>
+<body>
+
+  <div class="dashboard-container users-page">
+    <div class="topbar users-topbar">
+      <div>
+        <h2 class="header-glow">Users Management</h2>
+        <p class="users-topbar-subtitle">Search, filter, update, block, and export registered users.</p>
+      </div>
+
+      <div class="users-topbar-actions">
+        <a href="/admin/exportUsersCsv" class="logout-btn users-export-btn">Export CSV</a>
+        <a href="/dashboard.html" class="logout-btn users-back-btn">Back</a>
+       <button id="logoutBtn" class="logout-btn" type="button">Logout</button>
+      </div>
+    </div>
+
+    <div class="users-stats-grid">
+      <div class="users-stat-card">
+        <div class="users-stat-label">Total Users</div>
+        <div id="totalUsersCount" class="users-stat-value">0</div>
+      </div>
+
+      <div class="users-stat-card">
+        <div class="users-stat-label">Active Users</div>
+        <div id="activeUsersCount" class="users-stat-value">0</div>
+      </div>
+
+      <div class="users-stat-card">
+        <div class="users-stat-label">Blocked Users</div>
+        <div id="blockedUsersCount" class="users-stat-value">0</div>
+      </div>
+
+      <div class="users-stat-card">
+        <div class="users-stat-label">Completed Profiles</div>
+        <div id="completedUsersCount" class="users-stat-value">0</div>
+      </div>
+    </div>
+
+    <div class="card glass-card users-toolbar-card">
+      <div class="users-toolbar-header">
+        <div>
+          <h3>User Filters</h3>
+          <p>Use search and filters to quickly find the right user.</p>
+        </div>
+      </div>
+
+      <div class="toolbar-row users-search-row">
+        <input
+          type="text"
+          id="searchBox"
+          placeholder="Search by name / email / mobile / userid / twitter / instagram / facebook / booth / ward / city."
+        />
+        <button id="clearSearchBtn" class="secondary users-clear-btn" type="button">Clear</button>
+      </div>
+
+      <div class="toolbar-row users-filter-grid">
+        <select id="filterCountry">
+          <option value="">All Countries</option>
+        </select>
+
+        <select id="filterState">
+          <option value="">All States</option>
+        </select>
+
+        <select id="filterCity">
+          <option value="">All Cities</option>
+        </select>
+
+        <select id="filterLokSabha">
+          <option value="">All Lok Sabha</option>
+        </select>
+
+        <select id="filterVidhanSabha">
+          <option value="">All Vidhan Sabha</option>
+        </select>
+
+        <select id="filterWard">
+          <option value="">All Wards</option>
+        </select>
+
+        <select id="filterDesignation">
+          <option value="">All Designations</option>
+        </select>
+
+        <select id="filterStatus">
+          <option value="">All Status</option>
+          <option value="active">Active</option>
+          <option value="blocked">Blocked</option>
+        </select>
+      </div>
+
+      <div id="status" class="status-line">Loading users.</div>
+    </div>
+
+    <div class="table-card users-table-card">
+      <div class="table-wrap" id="usersTableWrap">
+        <div class="users-empty">Loading users.</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast"></div>
+  <script src="/toast.js"></script>
+  <script src="/users.js"></script>
+
+  <script>
+document.getElementById("logoutBtn")?.addEventListener("click", async () => {
+  try {
+    const res = await fetch("/admin/logout", {
+      method: "POST",
+      credentials: "include"
+    });
+    const data = await res.json().catch(() => ({}));
+    window.location.href = data.next || "/admin.html";
+  } catch {
+    window.location.href = "/admin.html";
+  }
+});
+</script>
+</body>
+</html>

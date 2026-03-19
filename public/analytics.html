@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Analytics</title>
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<div class="dashboard-container">
+
+<div class="topbar">
+<h2 class="header-glow">Analytics</h2>
+
+<div style="display:flex;gap:10px;">
+<a href="/dashboard.html" class="logout-btn">Back</a>
+<button id="logoutBtn" class="logout-btn" type="button">Logout</button>
+</div>
+
+</div>
+
+<div class="card glass-card">
+
+<h3>Total Tweet Clicks</h3>
+<h1 id="totalClicks">0</h1>
+
+</div>
+
+<div class="card glass-card">
+
+<h3>Search User Activity</h3>
+
+<input id="searchUser" placeholder="Search by name / mobile / userId">
+
+</div>
+
+<div class="card glass-card">
+
+<h3>Top Users</h3>
+<div id="topUsers"></div>
+
+</div>
+
+<div class="card glass-card">
+
+<h3>Top Tweets</h3>
+<div id="topTweets"></div>
+
+</div>
+
+<div class="card glass-card">
+
+<h3>Recent Activity</h3>
+<div id="recentActivity"></div>
+
+</div>
+
+</div>
+
+<script src="/toast.js"></script>
+<script src="/analytics.js"></script>
+<script>
+document.getElementById("logoutBtn")?.addEventListener("click", async () => {
+  try {
+    const res = await fetch("/admin/logout", {
+      method: "POST",
+      credentials: "include"
+    });
+    const data = await res.json().catch(() => ({}));
+    window.location.href = data.next || "/admin.html";
+  } catch {
+    window.location.href = "/admin.html";
+  }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-body">
+
+  <div class="login-box">
+    <h1 class="brand-title">User Login</h1>
+<p class="subtitle">Login with email or mobile & password</p>
+
+<input
+  type="text"
+  id="loginId"
+  placeholder="Email or Mobile Number"
+  inputmode="email"
+  autocomplete="username"
+  maxlength="120"
+>
+<input
+  type="password"
+  id="password"
+  placeholder="Password"
+  minlength="6"
+  maxlength="128"
+  autocomplete="current-password"
+>
+
+<button id="loginBtn" type="button">Login</button>
+
+    <div style="margin-top:12px; display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;">
+      <a href="/signup.html">Create account</a>
+      <a href="/forgot.html">Forgot password?</a>
+    </div>
+
+    <p id="msg" class="form-msg"></p>
+  </div>
+
+  <div id="toast"></div>
+  <script src="toast.js"></script>
+  <script src="user-auth.js"></script>
+</body>
+</html>

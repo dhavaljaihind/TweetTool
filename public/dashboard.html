@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<div class="dashboard-container">
+
+    <div class="topbar">
+        <h2 class="header-glow">Admin Dashboard</h2>
+
+        <div id="adminMenu" style="display:flex; gap:10px; align-items:center;">
+
+<a id="usersBtn" href="/users.html" class="logout-btn" style="text-decoration:none;">Users</a>
+
+<a id="mastersBtn" href="/masters.html" class="logout-btn" style="text-decoration:none;">Masters</a>
+
+<a id="analyticsBtn" href="/analytics.html" class="logout-btn" style="text-decoration:none;">Analytics</a>
+
+<a id="adminsBtn" href="/admins.html" class="logout-btn" style="text-decoration:none; display:none;">Admins</a>
+
+         <button id="logoutBtn" class="logout-btn" type="button">Logout</button>
+
+        </div>
+    </div>
+
+    <div class="welcome-box glass-card">
+        <h2>🚩 Jay Shree Ram 🚩</h2>
+        <p>Tool made by Dhaval Jaihind</p>
+    </div>
+
+    <div class="tabs">
+<button class="tab-btn active" id="tabAddBtn" type="button">Add Post</button>
+<button class="tab-btn" id="tabManageBtn" type="button">Manage Posts</button>
+    </div>
+
+    <!-- ADD POST -->
+    <div id="add" class="tab-content active">
+        <div class="card glass-card">
+
+            <h3>Create Tweet</h3>
+
+<textarea id="content" placeholder="Write tweet."></textarea>
+<div id="contentCharCounter" class="char-counter">0 characters</div>
+<div id="contentCharAlert" class="char-alert-text"></div>
+
+<label style="display:block; margin-top:10px; font-weight:600;">Upload Media (Optional)</label>
+<input type="file" id="mediaUpload" accept="image/jpeg,image/png,video/mp4">
+
+<small style="display:block; color:#666;">Allowed: JPEG, PNG, MP4</small>
+<small id="mediaSizeWarning" style="display:block; margin-top:4px; color:#d32f2f;"></small>
+
+<div id="mediaPreviewBox" class="media-preview-box" style="display:none;">
+  <div id="mediaPreviewInner"></div>
+</div>
+
+<div id="singleUploadProgressWrap" class="upload-progress-wrap" style="display:none;">
+  <div class="upload-progress-bar">
+    <div id="singleUploadProgressBar" class="upload-progress-fill"></div>
+  </div>
+  <div id="singleUploadProgressText" class="upload-progress-text">0%</div>
+</div>
+
+<hr style="margin:20px 0;">
+
+<label style="display:block; margin-top:10px; font-weight:600;">Bulk Text File</label>
+<input type="file" id="batchUpload" accept=".txt,.doc,.docx">
+
+<label style="display:block; margin-top:12px; font-weight:600;">Bulk Media Files</label>
+<input type="file" id="bulkMediaUpload" accept="image/jpeg,image/png,video/mp4" multiple>
+
+<small style="display:block; color:#666;">
+  Example: first post gets 1.jpg, second gets 2.mp4, third gets 3.png
+</small>
+
+<div id="bulkUploadProgressWrap" class="upload-progress-wrap" style="display:none;">
+  <div class="upload-progress-bar">
+    <div id="bulkUploadProgressBar" class="upload-progress-fill"></div>
+  </div>
+  <div id="bulkUploadProgressText" class="upload-progress-text">0%</div>
+</div>
+
+<button id="batchUploadBtn">Upload & Publish All</button>
+
+            <div class="leader-section glass-card">
+                <h4>Trend Visibility Control</h4>
+
+                <label style="display:block; margin-top:10px; font-weight:600;">Trend Status</label>
+                <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-top:8px;">
+                    <label style="display:flex; align-items:center; gap:8px;">
+                        <input type="checkbox" id="trendEnabledToggle" checked>
+                        <span>Trends ON</span>
+                    </label>
+                </div>
+
+                <label style="display:block; margin-top:12px; font-weight:600;">Trend Heading / Title (shown when ON)</label>
+                <input type="text" id="trendTitleInput" placeholder="Trending Now">
+
+                <label style="display:block; margin-top:12px; font-weight:600;">Message (shown when OFF)</label>
+                <textarea id="trendOffMessageInput" placeholder="Currently no trends available. We will inform you when trend is available."></textarea>
+
+                <div style="margin-top:12px;">
+                    <button id="saveTrendSettingsBtn" type="button">Save Trend Settings</button>
+                </div>
+            </div>
+
+            <div class="leader-section glass-card">
+
+                <h4>Manage Leader Names</h4>
+
+                <div class="leader-input">
+                    <input type="text" id="newLeader" placeholder="@leadername">
+                    <button id="addLeaderBtn">Add</button>
+                </div>
+
+                <div id="leaderListDashboard"></div>
+
+            </div>
+
+            <button id="addBtn">Publish Tweet</button>
+
+        </div>
+    </div>
+
+    <!-- MANAGE POSTS -->
+    <div id="manage" class="tab-content">
+
+        <div style="margin-bottom:15px;text-align:right;">
+            <button id="deleteAllTweets" class="delete-btn">
+                Delete All Posts
+            </button>
+        </div>
+
+        <div class="card glass-card" id="manageContainer">
+            <div id="tweetList"></div>
+        </div>
+
+    </div>
+
+</div>
+
+<div id="toast"></div>
+
+<script src="toast.js"></script>
+<script src="dashboard.js"></script>
+<script src="manage.js"></script>
+
+<script>
+
+async function loadAdminRole(){
+
+    try{
+
+        const res = await fetch("/admin/myRole",{credentials:"include"});
+        const data = await res.json();
+
+        if(data.role === "super"){
+
+            document.getElementById("adminsBtn").style.display = "inline-block";
+            document.getElementById("usersBtn").style.display = "inline-block";
+
+        }
+
+    }catch(e){
+        console.log("Role check failed");
+    }
+
+}
+
+loadAdminRole();
+
+function openTab(e, tab){
+
+    document.querySelectorAll(".tab-btn").forEach(b=>b.classList.remove("active"));
+    document.querySelectorAll(".tab-content").forEach(c=>c.classList.remove("active"));
+
+    document.getElementById(tab).classList.add("active");
+    e.target.classList.add("active");
+
+    if(tab==="manage" && typeof window.loadTweets === "function") {
+        window.loadTweets();
+    }
+}
+
+document.getElementById("logoutBtn")?.addEventListener("click", async () => {
+    try {
+        const res = await fetch("/admin/logout", {
+            method: "POST",
+            credentials: "include"
+        });
+        const data = await res.json().catch(() => ({}));
+        window.location.href = data.next || "/admin.html";
+    } catch {
+        window.location.href = "/admin.html";
+    }
+});
+
+document.getElementById("tabAddBtn")?.addEventListener("click", (e) => openTab(e, "add"));
+document.getElementById("tabManageBtn")?.addEventListener("click", (e) => openTab(e, "manage"));
+</script>
+
+</body>
+</html>

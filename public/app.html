@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tweet Tool</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="main-container">
+
+    <div class="header">
+        <h1>BE PART OF THE TREND</h1>
+        <p>The BJP Surat IT Team is here to make your work easier</p>
+
+        <div style="margin-top:12px;">
+          <a href="/user/logout" class="logout-btn">Logout</a>
+        </div>
+    </div>
+
+    <div class="personal-tag-box">
+        <label>Personal Hashtag (Optional)</label>
+        <input type="text" id="personalTag" placeholder="#MyTag">
+    </div>
+
+    <div id="trendTitleWrap" style="text-align:center; margin:18px 0 10px; display:none;">
+        <h2 id="trendTitleText" style="margin:0;"></h2>
+    </div>
+
+    <div id="trendMessageWrap" style="text-align:center; margin:18px 0; display:none;">
+        <p id="trendMessageText" class="empty-msg" style="margin:0;"></p>
+    </div>
+
+    <div id="tweetsContainer"></div>
+
+</div>
+
+<div id="toast"></div>
+
+<script src="toast.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>

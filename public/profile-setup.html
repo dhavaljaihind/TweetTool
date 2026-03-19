@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Setup Profile</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/profile-setup.css" />
+</head>
+<body>
+
+  <div class="profile-page">
+    <div class="profile-shell">
+
+      <div class="profile-hero">
+        <h1>Setup Your Profile</h1>
+        <p>Complete your details once to continue to the platform</p>
+      </div>
+
+      <div class="profile-card">
+        <div class="profile-card-top">
+          <h2>Profile Details</h2>
+          <p>Select your organization and location details carefully before submitting.</p>
+        </div>
+
+        <div class="profile-form">
+          <div class="profile-grid">
+
+            <div class="field-group">
+              <label for="country">Country</label>
+              <select id="country"></select>
+            </div>
+
+            <div class="field-group">
+              <label for="state">State</label>
+              <select id="state" disabled></select>
+            </div>
+
+            <div class="field-group">
+              <label for="city">City / District / Taluka</label>
+              <select id="city" disabled></select>
+            </div>
+
+            <div class="field-group">
+              <label for="loksabha">Lok Sabha</label>
+              <select id="loksabha" disabled></select>
+            </div>
+
+            <div class="field-group">
+              <label for="vidhansabha">Vidhan Sabha</label>
+              <select id="vidhansabha" disabled></select>
+            </div>
+
+            <div class="field-group">
+              <label for="ward">Ward (Optional)</label>
+              <select id="ward" disabled></select>
+            </div>
+
+            <div class="field-group full">
+              <label for="designation">Designation</label>
+              <select id="designation" disabled></select>
+            </div>
+
+            <div class="field-group">
+              <label for="boothNo">Booth No. (Optional)</label>
+              <input id="boothNo" placeholder="Enter Booth Number" />
+            </div>
+
+            <div class="field-group">
+              <label for="primaryMemberNo">Primary Member No. (Optional)</label>
+              <input id="primaryMemberNo" placeholder="Enter Primary Member Number" />
+            </div>
+
+            <div class="field-group">
+              <label for="sakriyaSabhyaNo">Sakriya Sabhya No. (Optional)</label>
+              <input id="sakriyaSabhyaNo" placeholder="Enter Sakriya Sabhya Number" />
+            </div>
+
+<div class="field-group full">
+  <label for="twitter">Twitter Username</label>
+
+  <div class="username-input">
+    <span class="username-prefix">@</span>
+    <input id="twitter" placeholder="username" />
+  </div>
+
+  <div class="field-note">Enter username only. @ is added automatically.</div>
+</div>
+
+<div class="field-group full">
+  <label>Twitter Verification</label>
+  <div class="verify-row">
+    <button id="verifyTwitterBtn" type="button">Verify Twitter</button>
+    <div id="twitterVerifiedBox" class="verified-box">Not Verified</div>
+  </div>
+</div>
+
+
+<div class="field-group full">
+  <label for="instagram">Instagram Username</label>
+
+  <div class="username-input">
+    <span class="username-prefix">@</span>
+    <input id="instagram" placeholder="username" />
+  </div>
+
+  <div class="field-note">Enter username only. @ is added automatically.</div>
+</div>
+
+<div class="field-group full">
+  <label>Instagram Verification</label>
+  <div class="verify-row">
+    <button id="verifyInstagramBtn" type="button">Verify Instagram</button>
+    <div id="instagramVerifiedBox" class="verified-box">Not Verified</div>
+  </div>
+</div>
+
+
+<div class="field-group full">
+  <label for="facebook">Facebook Username</label>
+
+  <div class="username-input">
+    <span class="username-prefix">@</span>
+    <input id="facebook" placeholder="username" />
+  </div>
+
+  <div class="field-note">Enter username only. @ is added automatically.</div>
+</div>
+
+<div class="field-group full">
+  <label>Facebook Verification</label>
+  <div class="verify-row">
+    <button id="verifyFacebookBtn" type="button">Verify Facebook</button>
+    <div id="facebookVerifiedBox" class="verified-box">Not Verified</div>
+  </div>
+</div>
+          </div>
+
+          <div class="profile-actions">
+            <a href="/user/logout" class="logout-link">Logout</a>
+            <button id="submitBtn" class="submit-btn" type="button" style="display:none;">Submit Profile</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="toast"></div>
+  <script src="/toast.js"></script>
+  <script src="/profile-setup.js"></script>
+</body>
+</html>

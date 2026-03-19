@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Signup</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .otp-group {
+      margin: 8px 0 14px;
+      text-align: left;
+    }
+
+    .otp-row {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: nowrap;
+    }
+
+    .otp-row input {
+      flex: 1;
+      min-width: 0;
+      margin-top: 0;
+    }
+
+    .otp-row button {
+      width: auto !important;
+      min-width: 82px;
+      margin-top: 0 !important;
+      padding: 8px 10px;
+      font-size: 12px;
+      line-height: 1.1;
+      border-radius: 8px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .verify-status {
+      margin-top: 6px;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    #signupBtn {
+      width: 100%;
+    }
+  </style>
+</head>
+<body class="login-body">
+
+  <div class="login-box">
+    <h1 class="brand-title">User Signup</h1>
+    <p class="subtitle">Create your account</p>
+
+   <input
+  type="text"
+  id="name"
+  placeholder="Full Name"
+  maxlength="80"
+  autocomplete="name"
+>
+
+   <input
+  type="email"
+  id="email"
+  placeholder="Email Address"
+  maxlength="120"
+  autocomplete="email"
+  inputmode="email"
+>
+    <div class="otp-group">
+      <div class="otp-row">
+        <button type="button" id="sendEmailOtpBtn">Send OTP</button>
+        <input
+  type="text"
+  id="emailOtp"
+  placeholder="Enter 6 Digit OTP"
+  inputmode="numeric"
+  maxlength="6"
+  autocomplete="one-time-code"
+>
+        <button type="button" id="verifyEmailOtpBtn" disabled>Verify</button>
+      </div>
+      <div id="emailVerifiedStatus" class="verify-status">Email not verified</div>
+    </div>
+
+    <input
+  type="text"
+  id="mobile"
+  placeholder="Mobile Number (10 digits)"
+  inputmode="numeric"
+  maxlength="10"
+  autocomplete="tel"
+>
+    <div class="otp-group">
+      <div class="otp-row">
+        <button type="button" id="sendMobileOtpBtn">Send OTP</button>
+        <input
+  type="text"
+  id="mobileOtp"
+  placeholder="Enter 6 Digit OTP"
+  inputmode="numeric"
+  maxlength="6"
+  autocomplete="one-time-code"
+>
+       <button type="button" id="verifyMobileOtpBtn" disabled>Verify</button>
+      </div>
+      <div id="mobileVerifiedStatus" class="verify-status">Mobile not verified</div>
+    </div>
+
+    <input
+  type="password"
+  id="password"
+  placeholder="Create Password (min 6 chars)"
+  minlength="6"
+  maxlength="128"
+  autocomplete="new-password"
+>
+
+   <button id="signupBtn" type="button">Sign Up</button>
+
+    <p style="margin-top:12px;">
+      Already have an account? <a href="/login.html">Login</a>
+    </p>
+
+    <p id="msg" class="form-msg"></p>
+  </div>
+
+  <div id="toast"></div>
+  <script src="toast.js"></script>
+  <script src="user-auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hierarchy Masters</title>
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+  <div class="dashboard-container">
+<div class="topbar">
+  <h2 class="header-glow">Hierarchy Masters</h2>
+
+<div style="display:flex; gap:10px; flex-wrap:wrap;">
+  <a href="/admin/exportMastersWorkbook" class="logout-btn">Export Masters Excel</a>
+
+  <input
+    type="file"
+    id="importMastersFile"
+    accept=".xlsx,.xls"
+    style="background:white;padding:6px;border-radius:6px;"
+  >
+
+  <button id="importMastersBtn" type="button">Upload Excel</button>
+
+  <a href="/dashboard.html" class="logout-btn">Back</a>
+  <button id="logoutBtn" class="logout-btn" type="button">Logout</button>
+</div>
+</div>
+
+    <div class="card glass-card">
+
+      <h3>Add Country</h3>
+      <input id="countryName" placeholder="Country Name" />
+      <button id="btnAddCountry">Add Country</button>
+
+<div style="display:flex; gap:10px; margin-top:10px;">
+  <select id="delCountry"></select>
+  <button type="button" onclick="renameCountry()">Rename Country</button>
+  <button onclick="deleteCountry()">Delete Country</button>
+</div>
+      <hr />
+
+      <h3>Add State</h3>
+      <label>Country</label>
+      <select id="stateCountry"></select>
+      <input id="stateName" placeholder="State Name" />
+      <button id="btnAddState">Add State</button>
+<div style="display:flex; gap:10px; margin-top:10px;">
+  <select id="delState"></select>
+  <button type="button" onclick="renameState()">Rename State</button>
+  <button onclick="deleteState()">Delete State</button>
+</div>
+      <hr />
+
+      <h3>Add City</h3>
+      <label>Country</label>
+      <select id="cityCountry"></select>
+      <label>State</label>
+      <select id="cityState"></select>
+      <input id="cityName" placeholder="City Name" />
+      <button id="btnAddCity">Add City</button>
+<div style="display:flex; gap:10px; margin-top:10px;">
+  <select id="delCity"></select>
+  <button type="button" onclick="renameCity()">Rename City</button>
+  <button onclick="deleteCity()">Delete City</button>
+</div>
+      <hr />
+
+      <h3>Add Lok Sabha</h3>
+      <label>Country</label>
+      <select id="lokCountry"></select>
+      <label>State</label>
+      <select id="lokState"></select>
+      <input id="lokName" placeholder="Lok Sabha Name" />
+      <button id="btnAddLok">Add Lok Sabha</button>
+<div style="display:flex; gap:10px; margin-top:10px;">
+  <select id="delLok"></select>
+  <button type="button" onclick="renameLok()">Rename Lok Sabha</button>
+  <button onclick="deleteLok()">Delete Lok Sabha</button>
+</div>
+      <hr />
+
+      <h3>Add Vidhan Sabha</h3>
+      <label>Country</label>
+      <select id="vidCountry"></select>
+      <label>State</label>
+      <select id="vidState"></select>
+      <label>Lok Sabha</label>
+      <select id="vidLok"></select>
+      <input id="vidName" placeholder="Vidhan Sabha Name" />
+      <button id="btnAddVid">Add Vidhan Sabha</button>
+<div style="display:flex; gap:10px; margin-top:10px;">
+  <select id="delVid"></select>
+  <button type="button" onclick="renameVid()">Rename Vidhan Sabha</button>
+  <button onclick="deleteVid()">Delete Vidhan Sabha</button>
+</div>
+      <hr />
+
+      <h3>Add Ward</h3>
+      <label>Country</label>
+      <select id="wardCountry"></select>
+      <label>State</label>
+      <select id="wardState"></select>
+      <label>City</label>
+      <select id="wardCity"></select>
+      <label>Lok Sabha</label>
+<select id="wardLok"></select>
+
+<label>Vidhan Sabha</label>
+<select id="wardVid"></select>
+      <input id="wardName" placeholder="Ward Name" />
+      <button id="btnAddWard">Add Ward</button>
+
+
+<div style="display:flex; gap:10px; margin-top:10px;">
+  <select id="delWard"></select>
+  <button type="button" onclick="renameWard()">Rename Ward</button>
+  <button onclick="deleteWard()">Delete Ward</button>
+</div>
+      <hr />
+
+      <h3>Add Designation</h3>
+      <input id="desName" placeholder="Designation" />
+      <button id="btnAddDesignation">Add</button>
+<div style="display:flex; gap:10px; margin-top:10px;">
+  <select id="delDes"></select>
+  <button type="button" onclick="renameDesignation()">Rename Designation</button>
+  <button onclick="deleteDesignation()">Delete Designation</button>
+</div>
+
+      <hr />
+
+      <h3>Bulk Master Data Upload</h3>
+      <p style="margin:0 0 10px; color:#666;">
+        Download the sample Excel first, fill the correct sheet, then choose level and upload.
+      </p>
+
+      <label>Level</label>
+      <select id="bulkMasterLevel">
+        <option value="countries">Countries</option>
+        <option value="states">States</option>
+        <option value="cities">Cities</option>
+        <option value="loksabhas">Lok Sabha</option>
+        <option value="vidhansabhas">Vidhan Sabha</option>
+        <option value="wards">Wards</option>
+        <option value="designations">Designations</option>
+      </select>
+
+      <label style="margin-top:10px;">Excel File</label>
+      <input type="file" id="bulkMasterFile" accept=".xlsx,.xls" />
+
+      <div style="display:flex; gap:10px; margin-top:12px; flex-wrap:wrap;">
+        <button id="downloadMastersTemplateBtn" type="button">Download Sample Excel</button>
+        <button id="uploadMastersExcelBtn" type="button">Upload Excel</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast"></div>
+
+  <script src="toast.js"></script>
+  <script src="masters.js"></script>
+<script>
+document.getElementById("logoutBtn")?.addEventListener("click", async () => {
+  try {
+    const res = await fetch("/admin/logout", {
+      method: "POST",
+      credentials: "include"
+    });
+    const data = await res.json().catch(() => ({}));
+    window.location.href = data.next || "/admin.html";
+  } catch {
+    window.location.href = "/admin.html";
+  }
+});
+</script>
+
+</body>
+</html>

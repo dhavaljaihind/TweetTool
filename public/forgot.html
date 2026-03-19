@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forgot Password</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-body">
+
+  <div class="login-box">
+    <h1 class="brand-title">Reset Password</h1>
+   <p class="subtitle">Reset with email or mobile OTP</p>
+
+<input
+  type="text"
+  id="identifier"
+  placeholder="Email or 10 Digit Mobile Number"
+  inputmode="email"
+  autocomplete="username"
+  maxlength="120"
+>
+<button id="otpBtn" type="button">Send OTP</button>
+
+<hr style="margin:16px 0; border:none; border-top:1px solid #eee;">
+
+<input
+  type="text"
+  id="otp"
+  placeholder="Enter 6 Digit OTP"
+  inputmode="numeric"
+  maxlength="6"
+  autocomplete="one-time-code"
+>
+<input
+  type="password"
+  id="newPassword"
+  placeholder="New Password (min 6 chars)"
+  minlength="6"
+  maxlength="128"
+  autocomplete="new-password"
+>
+<button id="resetBtn" type="button">Reset Password</button>
+
+    <p style="margin-top:12px;">
+      Back to <a href="/login.html">Login</a>
+    </p>
+
+    <p id="msg" class="form-msg"></p>
+  </div>
+
+  <div id="toast"></div>
+  <script src="toast.js"></script>
+  <script src="user-auth.js"></script>
+</body>
+</html>
