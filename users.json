@@ -1,1 +1,39 @@
-[]
+[
+  {
+    "userid": "U177391053259180787",
+    "name": "dhaval",
+    "email": "dhavaljaihind@gmail.com",
+    "mobile": "7359140836",
+    "passwordHash": "$2b$10$CKK3zgzEYgeqegIyOcSSXeH0DBfcTcGf2I9wQS9SWIhdUmpDcESua",
+    "isBlocked": false,
+    "profileCompleted": true,
+    "profile": {
+      "countryId": "C_1773303496527_81930",
+      "stateId": "S_1773303504522_87559",
+      "cityId": "CI_1773303536954_870",
+      "loksabhaId": "L_1773303516712_3975",
+      "vidhansabhaId": "V_1773303526184_67517",
+      "wardId": "W_1773303546870_51050",
+      "designationId": "D_1773303462238_51109",
+      "country": "India",
+      "states": "Gujarat",
+      "city": "Surat",
+      "loksabha": "25 - Navsari",
+      "vidhansabha": "168 - Choryasi",
+      "ward": "27 - Dindoli (South)",
+      "designation": "City IT Cell Co In-charge",
+      "booth": "123",
+      "primaryMemberNo": "456",
+      "sakriyaSabhyaNo": "789",
+      "twitter": "@dhavaljaihind",
+      "twitterVerified": true,
+      "instagram": "@thedhavaljaihind",
+      "instagramVerified": true,
+      "facebook": "thedhavaljaihind",
+      "facebookVerified": true,
+      "savedAt": 1773910582027
+    },
+    "createdAt": 1773910532591,
+    "updatedAt": 1773910582027
+  }
+]
