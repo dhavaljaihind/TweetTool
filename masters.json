@@ -1,11 +1,4 @@
 {
-  "country": [],
-  "city": [],
-  "vidhansabha": [],
-  "ward": [],
-  "shaktikendra": [],
-  "booth": [],
-  "designation": [],
   "countries": [
     {
       "id": "C_1773303496527_81930",
@@ -1400,19 +1393,19 @@
       "id": "W_1773303546867_53448",
       "name": "1 - Jahangirpura-Variyav-Chhaprabhatha-Kosad",
       "cityId": "CI_1773303536954_870",
-      "vidhansabhaId": "V_1773303526184_31318"
+      "vidhansabhaId": "V_1773303526184_71496"
     },
     {
       "id": "W_1773303546868_79023",
       "name": "1 - Jahangirpura-Variyav-Chhaprabhatha-Kosad",
       "cityId": "CI_1773303536954_870",
-      "vidhansabhaId": "V_1773303526184_10093"
+      "vidhansabhaId": "V_1773303526184_61256"
     },
     {
       "id": "W_1773303546868_90860",
       "name": "2 - Amroli-Mota Varachha-Kathor",
       "cityId": "CI_1773303536954_870",
-      "vidhansabhaId": "V_1773303526184_31318"
+      "vidhansabhaId": "V_1773303526184_71496"
     },
     {
       "id": "W_1773303546868_89938",
@@ -1448,7 +1441,13 @@
       "id": "W_1773303546869_41614",
       "name": "5 - Fulpada-Ashwinikumar",
       "cityId": "CI_1773303536954_870",
-      "vidhansabhaId": "V_1773303526184_48376"
+      "vidhansabhaId": "V_1773303526184_22450"
+    },
+    {
+      "id": "W_1773303546869_85554",
+      "name": "6 - Katargam",
+      "cityId": "CI_1773303536954_870",
+      "vidhansabhaId": "V_1773303526184_22450"
     },
     {
       "id": "W_1773303546869_85554",
@@ -1463,12 +1462,6 @@
       "vidhansabhaId": "V_1773303526184_31318"
     },
     {
-      "id": "W_1773303546869_85826",
-      "name": "7 - Katargam-Vedroad",
-      "cityId": "CI_1773303536954_870",
-      "vidhansabhaId": "V_1773303526184_61256"
-    },
-    {
       "id": "W_1773303546869_86485",
       "name": "8 - Dabholi-Singanpor",
       "cityId": "CI_1773303536954_870",
@@ -1478,13 +1471,25 @@
       "id": "W_1773303546869_1706",
       "name": "8 - Dabholi-Singanpor",
       "cityId": "CI_1773303536954_870",
-      "vidhansabhaId": "V_1773303526184_61256"
+      "vidhansabhaId": "V_1773303526184_22450"
     },
     {
       "id": "W_1773303546869_48957",
       "name": "9 - Rander-Jahangirabad-Palanpur",
       "cityId": "CI_1773303536954_870",
       "vidhansabhaId": "V_1773303526184_61256"
+    },
+    {
+      "id": "W_1773303546869_48957",
+      "name": "9 - Rander-Jahangirabad-Palanpur",
+      "cityId": "CI_1773303536954_870",
+      "vidhansabhaId": "V_1773303526184_67517"
+    },
+    {
+      "id": "W_1773303546869_22554",
+      "name": "10 - Adajan-Pal-Ichchhapor",
+      "cityId": "CI_1773303536954_870",
+      "vidhansabhaId": "V_1773303526184_67517"
     },
     {
       "id": "W_1773303546869_22554",
@@ -1499,22 +1504,34 @@
       "vidhansabhaId": "V_1773303526184_61256"
     },
     {
-      "id": "W_1773303546869_27889",
-      "name": "11 - Adajan-Gorat",
+      "id": "W_1773303546869_38749",
+      "name": "12 - Nanavat-Saiyadpura-Kubernagar-Mahidharpura",
       "cityId": "CI_1773303536954_870",
-      "vidhansabhaId": "V_1773303526184_67517"
+      "vidhansabhaId": "V_1773303526184_31318"
     },
     {
       "id": "W_1773303546869_38749",
       "name": "12 - Nanavat-Saiyadpura-Kubernagar-Mahidharpura",
       "cityId": "CI_1773303536954_870",
-      "vidhansabhaId": "V_1773303526184_48376"
+      "vidhansabhaId": "V_1773303526184_40296"
+    },
+    {
+      "id": "W_1773303546869_38749",
+      "name": "12 - Nanavat-Saiyadpura-Kubernagar-Mahidharpura",
+      "cityId": "CI_1773303536954_870",
+      "vidhansabhaId": "V_1773303526184_22450"
     },
     {
       "id": "W_1773303546869_35931",
       "name": "13 - Wadi Falia-Navapura-Begumpura-Salabatpura",
       "cityId": "CI_1773303536954_870",
-      "vidhansabhaId": "V_1773303526184_48376"
+      "vidhansabhaId": "V_1773303526184_40296"
+    },
+    {
+      "id": "W_1773303546869_35931",
+      "name": "13 - Wadi Falia-Navapura-Begumpura-Salabatpura",
+      "cityId": "CI_1773303536954_870",
+      "vidhansabhaId": "V_1773303526184_22450"
     },
     {
       "id": "W_1773303546869_96253",
@@ -1526,7 +1543,7 @@
       "id": "W_1773303546869_14793",
       "name": "14 - Umarwada-Matawadi",
       "cityId": "CI_1773303536954_870",
-      "vidhansabhaId": "V_1773303526184_89630"
+      "vidhansabhaId": "V_1773303526184_93364"
     },
     {
       "id": "W_1773303546869_34379",
@@ -1535,32 +1552,32 @@
       "vidhansabhaId": "V_1773303526184_48376"
     },
     {
-      "id": "W_1773303546869_5038",
-      "name": "15 - Karanj-Magob",
-      "cityId": "CI_1773303536954_870",
-      "vidhansabhaId": "V_1773303526184_93364"
-    },
-    {
       "id": "W_1773303546869_99234",
       "name": "16 - Puna (West)",
       "cityId": "CI_1773303536954_870",
-      "vidhansabhaId": "V_1773303526184_87814"
-    },
-    {
-      "id": "W_1773303546869_80652",
-      "name": "16 - Puna (West)",
-      "cityId": "CI_1773303536954_870",
-      "vidhansabhaId": "V_1773303526184_93364"
+      "vidhansabhaId": "V_1773303526184_10093"
     },
     {
       "id": "W_1773303546869_5464",
       "name": "17 - Puna (East)",
       "cityId": "CI_1773303536954_870",
-      "vidhansabhaId": "V_1773303526184_87814"
+      "vidhansabhaId": "V_1773303526184_10093"
     },
     {
-      "id": "W_1773303546869_21880",
-      "name": "17 - Puna (East)",
+      "id": "W_1773303546870_18393",
+      "name": "18 - Limbayat-Parvat-Kumbhariya",
+      "cityId": "CI_1773303536954_870",
+      "vidhansabhaId": "V_1773303526184_10093"
+    },
+    {
+      "id": "W_1773303546870_18393",
+      "name": "18 - Limbayat-Parvat-Kumbhariya",
+      "cityId": "CI_1773303536954_870",
+      "vidhansabhaId": "V_1773303526184_780"
+    },
+    {
+      "id": "W_1773303546870_18393",
+      "name": "18 - Limbayat-Parvat-Kumbhariya",
       "cityId": "CI_1773303536954_870",
       "vidhansabhaId": "V_1773303526184_93364"
     },
@@ -1568,7 +1585,13 @@
       "id": "W_1773303546870_18393",
       "name": "18 - Limbayat-Parvat-Kumbhariya",
       "cityId": "CI_1773303536954_870",
-      "vidhansabhaId": "V_1773303526184_93364"
+      "vidhansabhaId": "V_1773303526184_67517"
+    },
+    {
+      "id": "W_1773303546870_95591",
+      "name": "19 - Aanjana-Dumbhal",
+      "cityId": "CI_1773303536954_870",
+      "vidhansabhaId": "V_1773303526184_89630"
     },
     {
       "id": "W_1773303546870_95591",
@@ -1586,13 +1609,19 @@
       "id": "W_1773303546870_99076",
       "name": "20 - Khatodara-Majura-Sagrampura",
       "cityId": "CI_1773303536954_870",
+      "vidhansabhaId": "V_1773303526184_40296"
+    },
+    {
+      "id": "W_1773303546870_99076",
+      "name": "20 - Khatodara-Majura-Sagrampura",
+      "cityId": "CI_1773303536954_870",
       "vidhansabhaId": "V_1773303526184_89630"
     },
     {
       "id": "W_1773303546870_61604",
       "name": "20 - Khatodara-Majura-Sagrampura",
       "cityId": "CI_1773303536954_870",
-      "vidhansabhaId": "V_1773303526184_47126"
+      "vidhansabhaId": "V_1773303526184_93364"
     },
     {
       "id": "W_1773303546870_24219",
@@ -1604,7 +1633,13 @@
       "id": "W_1773303546870_11809",
       "name": "21 - Soni Falia-Nanpura-Athwa-Piplod",
       "cityId": "CI_1773303536954_870",
-      "vidhansabhaId": "V_1773303526184_67517"
+      "vidhansabhaId": "V_1773303526184_40296"
+    },
+    {
+      "id": "W_1773303546870_64926",
+      "name": "22 - Bhatar-Vesu-Dumas",
+      "cityId": "CI_1773303536954_870",
+      "vidhansabhaId": "V_1773303526184_89630"
     },
     {
       "id": "W_1773303546870_64926",
@@ -1619,6 +1654,12 @@
       "vidhansabhaId": "V_1773303526184_47126"
     },
     {
+      "id": "W_1773303546870_21726",
+      "name": "23 - Bamroli-Udhna (North)",
+      "cityId": "CI_1773303536954_870",
+      "vidhansabhaId": "V_1773303526184_89630"
+    },
+    {
       "id": "W_1773303546870_86512",
       "name": "24 - Udhna (South)",
       "cityId": "CI_1773303536954_870",
@@ -1629,6 +1670,12 @@
       "name": "25 - Limbayat-Udhna Yard",
       "cityId": "CI_1773303536954_870",
       "vidhansabhaId": "V_1773303526184_93364"
+    },
+    {
+      "id": "W_1773303546870_82172",
+      "name": "25 - Limbayat-Udhna Yard",
+      "cityId": "CI_1773303536954_870",
+      "vidhansabhaId": "V_1773303526184_67517"
     },
     {
       "id": "W_1773303546870_82172",
@@ -1664,7 +1711,19 @@
       "id": "W_1773303546870_42856",
       "name": "28 - Pandesara-Bhestan",
       "cityId": "CI_1773303536954_870",
+      "vidhansabhaId": "V_1773303526184_67517"
+    },
+    {
+      "id": "W_1773303546870_42856",
+      "name": "28 - Pandesara-Bhestan",
+      "cityId": "CI_1773303536954_870",
       "vidhansabhaId": "V_1773303526184_47126"
+    },
+    {
+      "id": "W_1773303546870_62054",
+      "name": "29 - Althan-Bamroli-Vadod",
+      "cityId": "CI_1773303536954_870",
+      "vidhansabhaId": "V_1773303526184_89630"
     },
     {
       "id": "W_1773303546870_62054",
@@ -2678,5 +2737,12 @@
       "id": "D_1773303462243_99744",
       "name": "Karyakarta"
     }
-  ]
+  ],
+  "country": [],
+  "city": [],
+  "vidhansabha": [],
+  "ward": [],
+  "shaktikendra": [],
+  "booth": [],
+  "designation": []
 }
